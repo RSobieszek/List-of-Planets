@@ -1,0 +1,39 @@
+<div class="container">
+  <img src="../assets/img/saturn.png" alt="" class="list-logo">
+</div>
+
+<div class="row">
+  <div class="col d-flex justify-content-center ">
+    <input #searchBox class="search-box" placeholder=" Search planets..." (input)="search(searchBox.value)">
+  </div>
+</div>
+
+<div class="row">
+  <div class="col d-flex justify-content-center">
+    <a class="pagination" (click)="changeListSize(5)">5</a>
+    <a class="pagination" (click)="changeListSize(10)">10</a>
+    <a class="pagination" (click)="changeListSize(25)">25</a>
+    <a class="pagination" (click)="changeListSize(100)">100</a>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col d-flex justify-content-center">
+    <ul>
+      <li 
+        *ngFor="let plnt of planetList" 
+        (click)="showDetails(plnt)">
+        {{plnt.name}}
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="row">
+  <div class="col d-flex justify-content-center">
+    <button *ngIf="listPage !== 0" (click)="previous()">&#8672;</button>
+    <button *ngIf="!(planetList[planetList.length - 1].name === 'Jakku')" (click)="next()">&#8674;</button>
+  </div>  
+</div>
+
+
+

@@ -1,0 +1,22 @@
+<div class="container">
+  <img src="../assets/img/maps-and-location.png" alt="" class="detail-logo">
+</div>
+<div class="row">
+  <div class="col d-flex justify-content-center main-name">
+    {{ planet.name }}
+  </div>
+</div>
+<div class="row">
+  <div class="col d-flex justify-content-center">
+    <ul>
+      <li *ngFor="let key of planetKeys"> <span>{{key}}</span> : {{ planet[key] }}</li>
+    </ul>
+  </div>
+</div>
+<div class="container">
+  <button routerLink="/planet-list">Back to Planet List</button>
+</div>
+
+  
+
+
