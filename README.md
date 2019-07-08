@@ -1,3 +1,7 @@
+Click this link: https://rsobieszek.github.io/List-of-Planets/ to see live version
+
+--------------------------------------------------
+
 # ListOfPlanetsApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
